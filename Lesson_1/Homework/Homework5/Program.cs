@@ -1,8 +1,13 @@
-﻿using System;
+﻿/*а) Написать программу, которая выводит на экран ваше имя, фамилию и город проживания.
+б) Сделать задание, только вывод организуйте в центре экрана
+в) *Сделать задание б с использованием собственных методов (например, Print(string ms, int x,int y)
+ Манжай Олег*/
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+
 
 namespace Homework5
 {
@@ -10,7 +15,7 @@ namespace Homework5
     {
         static string Print(string str1, string str2, string str3, int x, int y)
         {
-            string result = $"Ваше имя: {str1}, ваша фамилмя: {str2}, ваш город: {str3}";
+            string result = $"Ваше имя: {str1}, ваша фамилия: {str2}, ваш город: {str3}";
             Console.SetCursorPosition(x, y);
             return result;
         }

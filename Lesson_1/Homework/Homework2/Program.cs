@@ -1,4 +1,7 @@
-﻿using System;
+﻿/*2. Ввести вес и рост человека. Рассчитать и вывести индекс массы тела (ИМТ) 
+  по формуле I=m/(h*h); где m — масса тела в килограммах, h — рост в метрах
+ Манжай Олег*/
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
