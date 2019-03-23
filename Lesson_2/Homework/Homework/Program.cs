@@ -48,13 +48,13 @@ namespace Homework1
             do
             {
                 Console.Write("Введите b: ");
-                a = (Console.ReadLine());
-            } while (!int.TryParse(a, out B));
+                b = (Console.ReadLine());
+            } while (!int.TryParse(b, out B));
             do
             {
                 Console.Write("Введите c: ");
-                a = (Console.ReadLine());
-            } while (!int.TryParse(a, out C));
+                c = (Console.ReadLine());
+            } while (!int.TryParse(c, out C));
 
             if (A == B && B == C)
             {
