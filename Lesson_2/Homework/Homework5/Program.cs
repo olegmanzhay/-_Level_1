@@ -25,22 +25,28 @@ namespace Homework5
         static void Main(string[] args)
         {
             double weigth, heigth, result;
+            double optimalIndex = 27.5;    // идеальный индекс
+           
 
             Console.WriteLine("Программа расчета индекса массы");
             Console.Write("Введите ваш вес: ");
             weigth = double.Parse(Console.ReadLine());
             Console.Write("Введите ваш рост: ");
             heigth = double.Parse(Console.ReadLine());
-            result = index(weigth, heigth);// индекс массы тела 
+            double optimalWeigth = optimalIndex * Math.Pow(heigth, 2);
+            result = index(weigth, heigth);   // индекс массы тела 
             Console.WriteLine($"Ваш индек составляет: {result}");
+            
             /*Шкала индексов*/
             if (result >= 0 && result < 16)
             {
                 Console.WriteLine("Выраженный дефицит массы тела, срочно наберите вес");
+                Console.WriteLine($"Наберите {optimalWeigth - weigth} кг");
             }
             else if(result >=16 && result < 18.5)
             {
                 Console.WriteLine("Недостаточная масса тела, срочно наберите вес");
+                Console.WriteLine($"Наберите {optimalWeigth - weigth} кг");
             }
             else if (result >= 18.5 && result < 25)
             {
@@ -49,18 +55,22 @@ namespace Homework5
             else if (result >= 25 && result < 30)
             {
                 Console.WriteLine("Лишний вес, советую вам похудеь");
+                Console.WriteLine($"Сбросьте {weigth - optimalWeigth} кг");
             }
             else if (result >= 30 && result < 35)
             {
                 Console.WriteLine("Ожирение I cтепени, в зал");
+                Console.WriteLine($"Сбросьте {weigth- optimalWeigth} кг");
             }
             else if (result >= 35 && result < 40)
             {
                 Console.WriteLine("Ожирение II cтепени, в зал срочно");
+                Console.WriteLine($"Сбросьте {weigth - optimalWeigth} кг");
             }
             else if (result >= 40)
             {
                 Console.WriteLine("Ожирение III cтепени, в зал срочно и диета");
+                Console.WriteLine($"Сбросьте {weigth - optimalWeigth} кг");
             }
             Console.ReadKey();
         }
