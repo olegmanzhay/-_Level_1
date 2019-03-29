@@ -66,8 +66,21 @@ namespace Homework
                 int nod = gcd(a1 - a2, commonDenominator);//Поиск НОД
                 if ((a1 - a2) / nod < commonDenominator / nod) // Если целая часть новой дроби меньше знаменателя
                 {
-                    if((a1 - a2) / nod!=0) // Если дробь!= 0
-                        Console.WriteLine($"{a1}/{b1} - {a2}/{b2} =  {(a1 - a2) / nod}/{commonDenominator / nod}");
+                    integer = (a1 - a2) / commonDenominator;
+                    if ((a1 - a2) / nod != 0) // Если дробь!= 0
+                    { 
+                        if (integer == 0)
+                        {
+                            Console.WriteLine($"{a1}/{b1} - {a2}/{b2} =  {(a1 - a2) / nod}/{commonDenominator / nod}");
+                        }
+                        else
+                        {
+                            if (((a1 - a2) - integer * b1) / nod != 0)
+                                Console.WriteLine($"{a1}/{b1} - {a2}/{b2} = {integer} | {((a1 - a2) - integer * b1) / nod}/{commonDenominator / nod}");
+                            else
+                                Console.WriteLine($"{a1}/{b1} - {a2}/{b2} = {integer}");
+                        }
+                    }
                     else
                         Console.WriteLine($"{a1}/{b1} - {a2}/{b2} =  {(a1 - a2) / nod}");
                 }
@@ -140,8 +153,12 @@ namespace Homework
                     int b = commonDenominator;// ОД
                     int nod = gcd(a, b);//Поиск НОД
                     integer = (int)(((a1 * k2) - (a2 * k1)) / commonDenominator); // цела часть новой дроби 
-                    if (integer == 0)
-                        Console.WriteLine($"{a1}/{b1} - {a2}/{b2} =  {a / nod}/{b / nod}");
+                    if (integer == 0) {
+                        if (a / nod != 0)
+                            Console.WriteLine($"{a1}/{b1} - {a2}/{b2} =  {a / nod}/{b / nod}");
+                        else
+                            Console.WriteLine($"{a1}/{b1} - {a2}/{b2} =  {integer}");
+                    }
                     else
                     {
                         if (integer < 0)//Если целая часть ментше 0, умножаем числитель на -1, чтобы не выводилось 2 минуса 

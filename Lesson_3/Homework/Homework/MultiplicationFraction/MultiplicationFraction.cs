@@ -37,6 +37,15 @@ namespace Homework
             }
             return number1;
         }
+        /// <summary>
+        /// Возвращает произведение двух дробей
+        /// </summary>
+        /// <param name="a1">Числитель 1 дроби</param>
+        /// <param name="b1">Знаменатель 1 дроби</param>
+        /// <param name="c1">Целая часть 1 дроби</param>
+        /// <param name="a2">Числитель 2 дроби</param>
+        /// <param name="b2">Знаменатель 2 дроби</param>
+        /// <param name="c2">Целая часть 1 дроби</param>
         static public void Multiplication(int a1, int b1, int c1, int a2, int b2, int c2)
         {
             if (c1 > 0 || c1 < 0)// Перевод в неправильную дробь  1 дроби 
@@ -55,12 +64,14 @@ namespace Homework
                 nod = gcd((-1) * (a1 * a2), b1 * b2);
             else if (b1 * b2 < 0)
                 nod = gcd(a1 * a2, (-1) * b1 * b2);
-           
-            if(integer == 0)
-                Console.WriteLine($"{a1}/{b1} * {a2}/{b2} = {a1*a2/nod}/{b1*b2/nod}");
-            else
-                Console.WriteLine($"{a1}/{b1} * {a2}/{b2} = {integer}| {((a1 * a2)-integer*(b1*b2))/nod}/{b1 * b2/nod}");
 
+            if (integer == 0)
+                Console.WriteLine($"{a1}/{b1} * {a2}/{b2} = {a1 * a2 / nod}/{b1 * b2 / nod}");
+            else
+                if (((a1 * a2) - integer * (b1 * b2)) / nod != 0)
+                Console.WriteLine($"{a1}/{b1} * {a2}/{b2} = {integer}| {((a1 * a2) - integer * (b1 * b2)) / nod}/{b1 * b2 / nod}");
+            else
+                Console.WriteLine($"{a1}/{b1} * {a2}/{b2} = {integer}");
         }
     }
 }

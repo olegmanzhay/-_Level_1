@@ -60,14 +60,14 @@ namespace Homework
             {
                 a2 = c2 * b2 + a2;
             }
-            int commonDenominator;
-            int integer;
-            int k1, k2;
-            if (b1 == b2)
+            int commonDenominator; //общий знаменатель
+            int integer; // целая цасть 
+            int k1, k2; // коэфициенты умножения
+            if (b1 == b2) // еслм знаменатели равны
             {
                 commonDenominator = b1;
-                int nod = gcd(a1 + a2, commonDenominator);
-                if ((a1 + a2) / nod < commonDenominator / nod)
+                int nod = gcd(a1 + a2, commonDenominator); // НОД
+                if ((a1 + a2) / nod < commonDenominator / nod) //Если числитель новой дроби < знаменателя новой дроби
                 {
                     Console.WriteLine($"{a1}/{b1} + {a2}/{b2} =  {(a1 + a2) / nod}/{commonDenominator / nod}");
                 }
@@ -76,7 +76,7 @@ namespace Homework
                     integer = (int)(((a1) + (a2)) / commonDenominator);
                     if (((a1 + a2) - integer * commonDenominator) / nod != 0 )
                     {
-                        if (((a1 + a2) - integer * commonDenominator) != 0)
+                        if (((a1 + a2) - integer * commonDenominator) != 0) // Если числитель != 0 
                             Console.WriteLine($"{a1}/{b1} + {a2}/{b2} =  {integer}|{((a1 + a2) - integer * commonDenominator) / nod} / {commonDenominator / nod}");
                         else
                             Console.WriteLine($"{a1}/{b1} + {a2}/{b2} =  {integer}");
@@ -87,31 +87,31 @@ namespace Homework
                     }
                 }
             }
-            else if (b1 % b2 == 0)
+            else if (b1 % b2 == 0) // Если остаток от деления 1 от 2 дроби == 0 
             {
-                k1 = b1 / b2;
-                integer = (int)(((a2 * k1) + a1) / b1);
-                int a = ((a2 * k1) + a1) - (integer * b1);
-                int b = b1;
+                k1 = b1 / b2; // коэфициент умножения 
+                integer = (int)(((a2 * k1) + a1) / b1); //целая часть
+                int a = ((a2 * k1) + a1) - (integer * b1); // числитель новой дроби
+                int b = b1; // знаменатель новой дроби 
                 if (a == 0)
                 {
-                    Console.WriteLine($"{a1}/{b1} + {a2}/{b2} ={integer}");
+                    Console.WriteLine($"{a1}/{b1} + {a2}/{b2} = {integer}");
 
                 }
-                int nod = gcd(a, b);
+                int nod = gcd(a, b);//НОД
                 if (nod >= 1)
                 {
 
-                    Console.WriteLine($"{a1}/{b1} + {a2}/{b2} ={integer}| {a / nod}/{b1 / nod}");
+                    Console.WriteLine($"{a1}/{b1} + {a2}/{b2} = {integer}| {a / nod}/{b1 / nod}");
 
                 }
                 else
                 {
-                    Console.WriteLine($"{a1}/{b1} + {a2}/{b2} ={a / nod}/{b1 / nod}");
+                    Console.WriteLine($"{a1}/{b1} + {a2}/{b2} = {a / nod}/{b1 / nod}");
 
                 }
             }
-            else if (b1 % b2 > 0)
+            else if (b1 % b2 > 0) //Если остаток от деления 1 от 2 дроби > 0
             {
                 commonDenominator = b2 * b1;
                 k1 = commonDenominator / b2;
@@ -123,14 +123,14 @@ namespace Homework
                     int b = commonDenominator;
                     if (a == 0)
                     {
-                        Console.WriteLine($"{a1}/{b1} + {a2}/{b2} ={integer}");
+                        Console.WriteLine($"{a1}/{b1} + {a2}/{b2} = {integer}");
                     }
                     else
                     {
                         int nod = gcd(a, b);
                         if (nod >= 1)
                         {
-                            Console.WriteLine($"{a1}/{b1} + {a2}/{b2} ={integer}| {a / nod}/{b / nod}");
+                            Console.WriteLine($"{a1}/{b1} + {a2}/{b2} = {integer}| {a / nod}/{b / nod}");
                         }
                     }
                 }
