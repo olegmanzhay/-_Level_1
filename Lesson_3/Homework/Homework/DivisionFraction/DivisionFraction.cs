@@ -60,16 +60,18 @@ namespace Homework
             int nod = 0;
             if (a1 * b2 > 0 && b1 * a2 > 0)
                 nod = gcd((a1 * a2), b1 * b2);
-            if (a1 * b2 < 0)
-                nod = gcd((-1) * (a1 * b2), b1 * a2);
-            if (b1 * a2 < 0)
-                nod = gcd(a1 * b2, (-1) * b1 * a2);
+            else if (a1 * b2 < 0 && b1 * a2 < 0)
+                nod = gcd(Math.Abs((a1 * a2)), Math.Abs((b1 * b2)));
+            else if (a1 * b2 < 0)
+                nod = gcd(Math.Abs(a1 * b2), b1 * a2);
+            else if (b1 * a2 < 0)
+                nod = gcd(a1 * b2, Math.Abs(b1 * a2));
 
             if (integer == 0)
                 Console.WriteLine($"{a1}/{b1} / {a2}/{b2} = {a1 * b2 / nod}/{b1 * a2 / nod}");
             else
             {
-                if ((((a1 * b2) - integer * (b1 * a2))) / nod != 0)
+                if ((double)(((a1 * b2) - integer * (b1 * a2))) / nod != 0  || (double)((((a1 * b2) - integer * (b1 * a2))) / nod)<0)
                     Console.WriteLine($"{a1}/{b1} / {a2}/{b2} = {integer}| {(((a1 * b2) - integer * (b1 * a2))) / nod}/{(b1 * a2) / nod}");
                 else
                     Console.WriteLine($"{a1}/{b1} / {a2}/{b2} = {integer}");

@@ -20,7 +20,7 @@ namespace Homework
             {
                 if (number1 > number2)
                 {
-                    if(number2!=0)
+                    if (number2 != 0)
                         number1 = number1 - number2;
                     else
                     {
@@ -30,7 +30,7 @@ namespace Homework
                 }
                 else
                 {
-                    if (number1!=0)
+                    if (number1 != 0)
                         number2 = number2 - number1;
                     else
                     {
@@ -52,7 +52,7 @@ namespace Homework
         /// <param name="c2">Целая часть  второй дроби</param>///
         static public void summ(int a1, int b1, int c1, int a2, int b2, int c2)
         {
-            if (c1 > 0 || c1< 0)
+            if (c1 > 0 || c1 < 0)
             {
                 a1 = c1 * b1 + a1;
             }
@@ -74,7 +74,7 @@ namespace Homework
                 else
                 {
                     integer = (int)(((a1) + (a2)) / commonDenominator);
-                    if (((a1 + a2) - integer * commonDenominator) / nod != 0 )
+                    if (((a1 + a2) - integer * commonDenominator) / nod != 0)
                     {
                         if (((a1 + a2) - integer * commonDenominator) != 0) // Если числитель != 0 
                             Console.WriteLine($"{a1}/{b1} + {a2}/{b2} =  {integer}|{((a1 + a2) - integer * commonDenominator) / nod} / {commonDenominator / nod}");
@@ -138,8 +138,24 @@ namespace Homework
                 {
                     int a = (a1 * k2) + (a2 * k1);
                     int b = commonDenominator;
-                    int nod = gcd(a, b);
-                    Console.WriteLine($"{a1}/{b1} + {a2}/{b2} =  {a / nod}/{b / nod}");
+                    integer = (int)a / b;
+                    int nod = 0;
+                    if (a > 0)
+                        nod = gcd(a, b);
+                    else
+                        nod = gcd(-a, b);
+                    if (Math.Abs(integer) < 0)
+                    {
+
+                        Console.WriteLine($"{a1}/{b1} + {a2}/{b2} =  {a / nod}/{b / nod}");
+                    }
+                    else
+                    {
+                        if(a<0)
+                            Console.WriteLine($"{a1}/{b1} + {a2}/{b2} =  {integer}|{Math.Abs(a - integer * commonDenominator) / nod}/{b / nod}");
+                        else
+                            Console.WriteLine($"{a1}/{b1} + {a2}/{b2} =  {integer}|{(a - integer * commonDenominator) / nod}/{b / nod}");
+                    }
                 }
             }
         }
