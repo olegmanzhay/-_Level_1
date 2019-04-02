@@ -10,7 +10,7 @@ namespace MyArray2
     public class MyArray2
     {
         int[,] a;
-        public MyArray2(int n, int k)
+        public MyArray2(int n, int k) // заполняет массив случайными числами от 0 до 9
         {
             a = new int[n, k];
             Random r = new Random();
@@ -23,7 +23,7 @@ namespace MyArray2
                 Console.WriteLine();
             }
         }
-        public MyArray2(int n, int k, string input, string output)
+        public MyArray2(int n, int k, string input, string output) // заполняет массив случайными числами, записывает его в файл и считывает его из файла 
         {
             a = new int[n, k];
             Random r = new Random();
@@ -70,7 +70,7 @@ namespace MyArray2
                 Console.WriteLine("Файл не найден");
             }
         }
-        public int Max
+        public int Max // получает максимальное значение из всех элементов массива
         {
             get
             {
@@ -88,7 +88,7 @@ namespace MyArray2
                 return max;
             }
         }
-        public int Min
+        public int Min // минимальное значение элементов массива
         {
             get
             {
@@ -106,7 +106,7 @@ namespace MyArray2
                 return min;
             }
         }
-        public int Summ(MyArray2 b)
+        public int Summ(MyArray2 b) // возврашает функцию всех элементов массива
         {
             int sum = 0;
             for (int i = 0; i < a.GetLength(0); i++)
@@ -118,7 +118,7 @@ namespace MyArray2
             }
             return sum;
         }
-        public List<int> Element(MyArray2 b, ref List<int> index)
+        public List<int> Element(MyArray2 b, ref List<int> index)// возвращает список индексов максимальных элементов массива
         {
             int max = a[0, 0];
             for (int i = 0; i < a.GetLength(0); i++)
@@ -148,7 +148,7 @@ namespace MyArray2
             }
             return index;
         }
-        public void SWriter(MyArray2 b, string output, ref List<int> index)
+        public void SWriter(MyArray2 b, string output, ref List<int> index)// записывает данные в файл 
         {
             int result1 = Summ(b);
             int result2 = b.Min;

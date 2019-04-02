@@ -10,8 +10,7 @@ namespace Homework5
     {
         static void Main(string[] args)
         {
-            const int z = 2;
-            int n, k;
+            int n, k; // размерность массива
             Console.Write("Введите количество строк в массиве: ");
             n = int.Parse(Console.ReadLine());
             Console.Write("Введите количество столбцов в массиве: ");
@@ -22,9 +21,9 @@ namespace Homework5
             Console.WriteLine($"Максимальный элемент массива: {a.Max.ToString()}");
             Console.WriteLine($"Минимальный элемент массива: {a.Min.ToString()}");
             
-            List<int> maxElement = new List<int>();
-            a.Element(a, ref maxElement);
-            int d = 0;
+            List<int> maxElement = new List<int>(); // Список для индексов максимальных элементов
+            a.Element(a, ref maxElement); // метод нахождения индекса максимального элемента массива 
+            int d = 0;// счетчик для перевода строки, как только выводится 2 координаты индекса
             Console.Write("Индекс максимального элемента сотавялет: ");
             foreach (int i in maxElement)
             {
@@ -42,10 +41,10 @@ namespace Homework5
             Console.WriteLine();
             Console.WriteLine();
 
-            string inputFile = "INPUT.TXT";
-            string outputFile = "OUTPUT.TXT";
+            string inputFile = "INPUT.TXT"; // файл для записи
+            string outputFile = "OUTPUT.TXT"; // файл для чтения 
             MyArray2.MyArray2 b = new MyArray2.MyArray2(n, k, inputFile, outputFile);
-            b.SWriter(b, outputFile, ref maxElement);
+            b.SWriter(b, outputFile, ref maxElement); // метод записи в файл 
             Console.ReadKey();
         }
     }

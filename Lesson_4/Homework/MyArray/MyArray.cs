@@ -15,6 +15,7 @@ namespace MyArray
                 a[i] = el;
             }
         }
+        
         //  Создание массива и заполнение его случайными числами от min до max
         public MyArray(int n, int min, int max)
         {
@@ -23,6 +24,7 @@ namespace MyArray
             for (int i = 0; i < n; i++)
                 a[i] = rnd.Next(min, max);
         }
+        
         // Чтобы констукторы отличались, передаю булевую переменную
         public MyArray(int n, int min, int step, bool flag)
         {
@@ -34,7 +36,8 @@ namespace MyArray
                 k += step;
             }
         }
-        public int Sum
+
+        public int Sum // возвращает сумму элементов массива
         {
             get
             {
@@ -45,7 +48,8 @@ namespace MyArray
             }
 
         }
-        public int Max
+
+        public int Max // возвращает максимальный элемент 
         {
             get
             {
@@ -55,6 +59,12 @@ namespace MyArray
                 return max;
             }
         }
+        
+        /// <summary>
+        /// возвращает инвертированный массив
+        /// </summary>
+        /// <param name="b">объект</param>
+        /// <returns>инвертированный масив</returns>
         public int[] Inverse(MyArray b)
         {
             int[] newmass = new int[a.Length];
@@ -62,10 +72,17 @@ namespace MyArray
             for (int i = 0; i < newmass.Length; i++)
             {
 
-                newmass[i] = (-1) * newmass[i];
+                newmass[i] = (-1) * newmass[i]; // инверсия элемента массива
             }
             return newmass;
         }
+        
+        /// <summary>
+        /// Возвращает массив умноженный на число
+        /// </summary>
+        /// <param name="b">объект</param>
+        /// <param name="number">множитель</param>
+        /// <returns>новый массив</returns>
         public int[] Multi(MyArray b, int number)
         {
 
@@ -76,6 +93,12 @@ namespace MyArray
             }
             return a;
         }
+        
+        /// <summary>
+        /// Возвращает количество максимальных элементов в массиве 
+        /// </summary>
+        /// <param name="b">объект</param>
+        /// <returns>количество максимальных элементов</returns>
         public int MaxCount(MyArray b)
         {
             int maxCount = 0;
@@ -96,6 +119,10 @@ namespace MyArray
             }
             return maxCount;
         }
+        
+        /// <summary>
+        /// Возвращает минимальное значение массива
+        /// </summary>
         public int Min
         {
             get
@@ -106,6 +133,8 @@ namespace MyArray
                 return min;
             }
         }
+       
+        // методы из методички
         public int CountPositive
         {
             get

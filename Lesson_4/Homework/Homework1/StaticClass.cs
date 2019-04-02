@@ -16,8 +16,8 @@ namespace Homework1
         /// <returns>кколичество пар</returns>
         public static int para(int[] a)
         {
-            int iterator = 0;
-            int k = 0;
+            int iterator = 0; // количество пар 
+            int k = 0; // номер пары 
             for (int i = 0; i < a.Length; i++)
             {
                 if (i + 1 < a.Length)
@@ -36,7 +36,7 @@ namespace Homework1
         /// Возвращает массив чисел
         /// </summary>
         /// <returns>Массив чисел</returns>
-        public static int[] Reader()
+        public static int[] Reader() 
         {
             int[] mass = new int[20];
             try

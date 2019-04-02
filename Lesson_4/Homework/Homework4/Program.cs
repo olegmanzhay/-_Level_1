@@ -14,10 +14,10 @@ namespace Homework4
 
         public bool Form(Access x)
         {
-            string[] loginPasword = File.ReadAllLines("Login.txt");
-            int iterator = 0;
+            string[] loginPasword = File.ReadAllLines("Login.txt"); // запись в массив логина и пароля
+            int iterator = 0; // доступ в систему
             int i;
-            int k = 0;
+            int k = 0; // количество попыток
 
             for (i = 0; i < loginPasword.Length; i += 2)
             {
