@@ -1,0 +1,37 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28307.271
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Homework1", "Homework1\Homework1.csproj", "{71F0EAD3-F220-43A3-BE2A-DFA9E748A9FC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Homework2", "Homework2\Homework2.csproj", "{7A2E4AB9-B27D-410C-9F88-E266897E3110}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Homework4", "Homework4\Homework4.csproj", "{6051E8A0-4676-4A21-B6DB-C04B058ABC03}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{71F0EAD3-F220-43A3-BE2A-DFA9E748A9FC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{71F0EAD3-F220-43A3-BE2A-DFA9E748A9FC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{71F0EAD3-F220-43A3-BE2A-DFA9E748A9FC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{71F0EAD3-F220-43A3-BE2A-DFA9E748A9FC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7A2E4AB9-B27D-410C-9F88-E266897E3110}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7A2E4AB9-B27D-410C-9F88-E266897E3110}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7A2E4AB9-B27D-410C-9F88-E266897E3110}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7A2E4AB9-B27D-410C-9F88-E266897E3110}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6051E8A0-4676-4A21-B6DB-C04B058ABC03}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6051E8A0-4676-4A21-B6DB-C04B058ABC03}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6051E8A0-4676-4A21-B6DB-C04B058ABC03}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6051E8A0-4676-4A21-B6DB-C04B058ABC03}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {7C6C541B-5A1A-4B61-AD81-F8CBAF33A8E1}
+	EndGlobalSection
+EndGlobal
