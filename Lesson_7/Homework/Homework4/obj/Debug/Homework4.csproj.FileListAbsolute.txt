@@ -1,0 +1,10 @@
+H:\GeekBrains\4. С#_Level_1\Lesson_7\Homework\Homework4\bin\Debug\Homework4.exe.config
+H:\GeekBrains\4. С#_Level_1\Lesson_7\Homework\Homework4\bin\Debug\Homework4.exe
+H:\GeekBrains\4. С#_Level_1\Lesson_7\Homework\Homework4\bin\Debug\Homework4.pdb
+H:\GeekBrains\4. С#_Level_1\Lesson_7\Homework\Homework4\obj\Debug\Homework4.csprojAssemblyReference.cache
+H:\GeekBrains\4. С#_Level_1\Lesson_7\Homework\Homework4\obj\Debug\Homework4.Properties.Resources.resources
+H:\GeekBrains\4. С#_Level_1\Lesson_7\Homework\Homework4\obj\Debug\Homework4.csproj.GenerateResource.cache
+H:\GeekBrains\4. С#_Level_1\Lesson_7\Homework\Homework4\obj\Debug\Homework4.csproj.CoreCompileInputs.cache
+H:\GeekBrains\4. С#_Level_1\Lesson_7\Homework\Homework4\obj\Debug\Homework4.exe
+H:\GeekBrains\4. С#_Level_1\Lesson_7\Homework\Homework4\obj\Debug\Homework4.pdb
+H:\GeekBrains\4. С#_Level_1\Lesson_7\Homework\Homework4\obj\Debug\Homework4.Form1.resources

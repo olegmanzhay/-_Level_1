@@ -1,0 +1,8 @@
+H:\GeekBrains\4. С#_Level_1\Lesson_7\Homework\Game2\bin\Debug\netstandard1.4\Game2.deps.json
+H:\GeekBrains\4. С#_Level_1\Lesson_7\Homework\Game2\bin\Debug\netstandard1.4\Game2.dll
+H:\GeekBrains\4. С#_Level_1\Lesson_7\Homework\Game2\bin\Debug\netstandard1.4\Game2.pdb
+H:\GeekBrains\4. С#_Level_1\Lesson_7\Homework\Game2\obj\Debug\netstandard1.4\Game2.csprojAssemblyReference.cache
+H:\GeekBrains\4. С#_Level_1\Lesson_7\Homework\Game2\obj\Debug\netstandard1.4\Game2.csproj.CoreCompileInputs.cache
+H:\GeekBrains\4. С#_Level_1\Lesson_7\Homework\Game2\obj\Debug\netstandard1.4\Game2.AssemblyInfo.cs
+H:\GeekBrains\4. С#_Level_1\Lesson_7\Homework\Game2\obj\Debug\netstandard1.4\Game2.dll
+H:\GeekBrains\4. С#_Level_1\Lesson_7\Homework\Game2\obj\Debug\netstandard1.4\Game2.pdb
