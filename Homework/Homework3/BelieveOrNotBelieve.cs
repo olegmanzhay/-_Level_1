@@ -58,7 +58,37 @@ namespace BelieveOrNotBelieve
             xmlFormat.Serialize(fStream, list);
             fStream.Close();
         }
-       
+        /// <summary>
+        /// Cохраняет "базу данных" ввыбраный сsv файл
+        /// </summary>
+        /// <param name="filename">выбраный файл</param>
+        public void SaveASCSV(string filename)
+        {
+            char delimeter = ';';
+
+            string[] mass = new string[list.Count*2];
+            for (int i = 0, j = 0; i < list.Count*2; j++, i++)
+            {
+                mass[i] =list[j].text;
+                mass[i + 1] = (list[j].trueFalse).ToString();
+                i++;
+            }
+
+            using (StreamWriter sw = new StreamWriter(filename,false, System.Text.Encoding.UTF8))
+            {
+                for (int i = 0, j=1; i < mass.Length; i++, j++)
+                {
+                    if (j % 2 != 0 && j != 0)
+                        sw.Write(mass[i] + delimeter);
+                    else
+                        sw.Write(mass[i]);
+                    if (j%2==0 && j!=0)
+                        sw.WriteLine();
+                }
+            }
+
+        }
+
         public void Load()
         {
             XmlSerializer xmlFormat = new XmlSerializer(typeof(List<Question>));
@@ -71,8 +101,8 @@ namespace BelieveOrNotBelieve
         /// </summary>
         public void LoadCSV()
         {
-            StreamReader sr = new StreamReader("data1.csv");
-            
+            StreamReader sr = new StreamReader(fileName);
+            Stream fStream = new FileStream(fileName, FileMode.Open, FileAccess.Read);
             while (!sr.EndOfStream)
             {
                 string[] str = sr.ReadLine().Split(';');
@@ -82,11 +112,11 @@ namespace BelieveOrNotBelieve
                     i++;
                 }
             }
-            sr.Close();
             XmlSerializer xmlFormat = new XmlSerializer(typeof(List<Question>));
             xmlFormat.Serialize(System.Xml.XmlWriter.Create("123.xml"), list); // создаем XML - файл и кидаем туда наш список из CSV файла
-            
-
+           
+            sr.Close();
+            fStream.Close();
         }
         public int Count
         {
